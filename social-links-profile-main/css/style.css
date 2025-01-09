@@ -17,15 +17,18 @@ body{
     font-family: "Inter", serif;
     font-size: 14px;
     background-color: var(--grey-900);
+    
 }
 
 
 .main__hero{
-    
+
     background-color: var(--grey-800);
     overflow: hidden;
     border-radius: 12px;
     color: var(--white);
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
@@ -35,9 +38,7 @@ body{
 }
 
 .main__info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
     gap: 8px;
     text-align: center;
 }
