@@ -25,6 +25,7 @@ body{
 
 .main{
   width: 100vw;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,8 +134,13 @@ body{
 
 @media (min-width:768px){
 
+  .main{
+    height: 100vh;
+  }
+
   .main__section{
     width: 50%;
+    margin: 200px;
   }
   .main__subscription{
     width: 50%;
