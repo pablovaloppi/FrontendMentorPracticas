@@ -1,0 +1,360 @@
+/* ## Colors */
+
+:root {
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+
+  --background-color: #f5f5f5;
+  --radius-card: 10px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", serif;
+  font-size: 18px;
+  color: var(--white);
+  background-color: var(--background-color);
+}
+
+.flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.main {
+  width: 90%;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .main__social-media {
+    background-color: var(--purple-500);
+    border-radius: var(--radius-card);
+    padding: 30px 50px;
+
+    .main__social-title {
+      line-height: 40px;
+      text-align: center;
+      font-size: 40px;
+      color: var(--white);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .main__social-image {
+      width: 65%;
+    }
+    .main__social-paragraph {
+      font-size: 16px;
+    }
+  }
+
+  .main__manage {
+    background-color: var(--white);
+    border-radius: var(--radius-card);
+    padding: 10px;
+    .main__manage-img-platform {
+      width: 90%;
+    }
+    .main__manage-title {
+      width: 90%;
+
+    }
+  }
+
+  .main__maintain {
+    padding: 15px;
+    height: 200px;
+    overflow: hidden;
+    background-color: var(--yellow-500);
+    border-radius: var(--radius-card);
+    .main__maintain-title {
+      width: 80%;
+      margin-bottom: 10px;
+    }
+    .main__maintain-img{
+      width: 60%;
+    }
+  }
+
+  .main__schedule{
+    padding: 25px 10px;
+    background-color: var(--purple-100);
+    border-radius: var(--radius-card);
+    .main__schedule-title{
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .main__schedule-img{
+      width: 95%;
+    }
+    
+    .main__schedule-paragraph{
+      margin-top: 10px;
+      color: var(--black);
+      font-size: 16px;
+      text-align: center;
+      width: 80%;
+    }
+  }
+
+  .main__followers{
+    background-color: var(--purple-500);
+    border-radius: var(--radius-card);
+    padding: 20px 0px 20px 50px ;
+    .main__follwers-img{
+      width: 75%;
+    }
+    .main__followers-title{
+      margin-top: 25px;
+      text-align: center;
+      width: 80%;
+      color: var(--white);
+    }
+  }
+
+  .main__audience{
+    background-color: var(--white);
+    padding:15px;
+    .main__audience-number{
+      color: var(--black);
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    .main__audience-paragraph{
+      color: var(--black);
+      font-size: 16px;
+      margin-bottom:20px;
+    }
+
+    .main__audience-avatars-img{
+      width: 50%;
+    }
+  }
+
+  .main__create-schedule{
+    background-color: var(--yellow-100);
+    border-radius: var(--radius-card);
+    padding: 25px;
+    .main__create-schedule-title{
+
+      margin-bottom: 15px;
+    }
+
+    .main__create-schedule-img{
+      width: 65%;
+    }
+  }
+
+  .main__contentAI{
+    background-color: var(--yellow-500);
+    border-radius: 10px;
+    padding: 15px 20px;
+    
+    .main__contentAI-title{
+      margin-bottom: 20px;
+      width: 90%;
+    }
+
+    .main__contentAI-img{
+      width: 70%;
+    }
+  }
+}
+
+.font-light-yellow {
+  color: var(--yellow-500);
+}
+
+.font-light-purple{
+  color: var(--purple-500);
+  font-weight: 600;
+}
+
+.title{
+  color: var(--black);
+  font-size: 28px;
+  line-height: 25px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 22px;
+  width: 90%;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: var(--black);
+}
+
+@media (min-width:768px){
+  .main{
+    width:95%;
+    height:830px;
+    margin: 60px;
+    gap: 10px;
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+ 
+    grid-template-areas: 
+  
+    "create social social schedule"
+    "create social social schedule"
+    "create social social schedule"
+    "create social social schedule"
+    "create social social schedule"
+    "create manage maintain schedule"
+    "contentIA manage maintain schedule"
+    "contentIA manage maintain schedule"
+    "contentIA manage maintain schedule"
+    "contentIA audience followers followers"
+    "contentIA audience followers followers"
+    "contentIA audience followers followers";
+
+    .main__social-media{
+      grid-area: social;
+      padding:60px 50px;
+      .main__social-title{
+        font-size: 57px;
+        width: 100%;
+        line-height: 60px;
+      }
+      .main__social-image{
+        width: 50%;
+      }
+      .main__social-paragraph{
+        font-size: 22px;
+      }
+    }
+    .main__manage{
+      grid-area: manage;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      overflow: hidden;
+      .main__manage-img-platform{
+        width: 140%;
+      }
+    }
+    .main__maintain{
+      grid-area: maintain;
+      height: auto;
+      padding: 30px;
+      .main__maintain-img{
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+    .main__schedule{
+      grid-area: schedule;
+      overflow: hidden;
+      padding-left: 20px;
+      .main__schedule-title{
+        text-align: left;
+      }
+      .main__schedule-img{
+        width: 150%;
+        max-width: 350px;
+        margin-left: 155px;
+      }
+      .main__schedule-paragraph{
+        font-size: 20px;
+        text-align: left;
+        line-height: 25px;
+      }
+    }
+    .main__audience{
+      grid-area: audience;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      .main__audience-number{
+        font-size: 56px;
+      }
+      .main__audience-paragraph{
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      .main__audience-avatars-img{
+        width: 70%;
+      }
+    }
+    .main__followers{
+      grid-area: followers;
+      padding: 0px 20px;
+      display: flex;
+      align-items: center;
+      .main__followers-title{
+        width: 50%;
+        text-align: left;
+        margin-left: 20px;
+      }
+      .main__follwers-img{
+        width: 40%;
+        max-width: 180px;
+      }
+    }
+    .main__create-schedule{
+      grid-area: create;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .main__create-schedule-img{
+        margin-top: 20px;
+        width: 90%;
+      }
+    
+    }
+    .main__contentAI{
+      grid-area: contentIA;
+      padding: 20px;
+
+      .main__contentAI-img{
+        margin-top: 20px;
+        width:95%;
+        max-width: 200px;
+      }
+    }
+  }
+
+  .title{
+    color: var(--black);
+    font-size: 32px;
+    line-height: 35px;
+    font-weight: 600;
+    letter-spacing: -1px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+    width: 90%;
+    line-height: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: var(--black);
+  }
+}
+
+@media(min-width:1024px){
+  
+  .main{
+    width: 80%;
+    gap: 30px;
+  }
+}
