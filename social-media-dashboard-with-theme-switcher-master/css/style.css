@@ -33,6 +33,7 @@
   --dark-desaturated-blue: hsl(228, 28%, 20%);/*Text */
   --desaturated-blue: hsl(228, 34%, 66%);/*Text */
   --desaturated-blue-transparent: hsla(228, 34%, 66%, 0.5);
+  --dark-hover: #333a56;
   --white: hsl(0, 0%, 100%);
 
   /* #### Light Theme */
@@ -43,6 +44,7 @@
   --light-desaturated-blue: #f0f3fa;
   --dark-grayish-blue: hsl(228, 12%, 44%);/*Text */
   --very-dark-blue:  hsl(230, 17%, 14%);/*Text */
+  --light-hover:#e1e3f0;
 }
 
 * {
@@ -56,7 +58,7 @@ body {
   font-family: "Inter", serif;
   background-color: var(--dark-background-color);
   color: var(--desaturated-blue);
-  transition: background 0.5s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
 body::after{
@@ -79,6 +81,7 @@ body.light-theme{
   --white:black;
   --toggle : var(--light-toggle);
   --very-pale-blue: var(--lime-green);
+  --dark-hover:var(--light-hover);
 }
 
 
@@ -177,6 +180,10 @@ body.light-theme{
           left: auto;
           right:  3px;
         }
+
+        &:hover{
+          cursor: pointer;
+        }
       }
     }
   }
@@ -188,7 +195,7 @@ body.light-theme{
     justify-content: center;
     gap: 25px;
     .main__social-card {
-      transition: background 0.5s ease-in-out;
+      transition: background 0.3s ease-in-out;
       background-color: var(--dark-desaturated-blue);
       height: 218px;
       width: 100%;
@@ -237,6 +244,11 @@ body.light-theme{
     
       }
     }
+
+    .main__social-card:hover {
+      cursor: pointer;
+      background-color: var(--dark-hover);
+    }
   }
 
   .main__overview-header{
@@ -270,6 +282,7 @@ body.light-theme{
       border-radius: 4px;
       padding: 10px 20px;
       gap: 10px;
+      transition: background 0.3s ease-in-out;
       .main__interview-card-top {
         display: flex;
         height: 50%;
@@ -304,7 +317,10 @@ body.light-theme{
       }
     }
 
-    
+    .main__interview-card:hover {
+      cursor: pointer;
+      background-color: var(--dark-hover);
+    }
   }
 }
 
