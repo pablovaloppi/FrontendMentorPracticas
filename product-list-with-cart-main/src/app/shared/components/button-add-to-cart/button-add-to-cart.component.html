@@ -1,0 +1,29 @@
+<div
+  class="button-product"
+  *ngIf="!isProductInCart; else buttonInCart"
+  (click)="addToCart()"
+>
+  <img
+    src="../../../../../assets/images/icon-add-to-cart.svg"
+    alt=""
+    class="button-product__icon"
+  />
+  <p class="button-product__text">Add to Cart</p>
+</div>
+<ng-template #buttonInCart>
+  <div class="button-product active">
+    <img
+      src="../../../../assets/images/icon-decrement-quantity.svg"
+      alt=""
+      class="button-product__img"
+      (click)="decrementCount()"
+    />
+    <p class="button-product__text">{{ quantity }}</p>
+    <img
+      src="../../../../assets/images/icon-increment-quantity.svg"
+      alt=""
+      class="button-product__img"
+      (click)="incrementCount()"
+    />
+  </div>
+</ng-template>

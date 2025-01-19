@@ -1,0 +1,17 @@
+<div class="product-card">
+    <div class="product-card__body">
+    <img src="{{image}}" alt="product card" class="product-card__img "
+    [ngClass]="{'in-cart':inCart}">
+    <app-button-ad-to-cart
+    [idProduct]="product.id"
+    (increment)="addItemInCart()"
+    (decrement)="removeItemInCart()"
+    (isInCart)="isInCart($event)"
+    ></app-button-ad-to-cart>
+</div>
+    <div class="product-card__footer">
+        <p class="product-card__description">{{product.category}}</p>
+        <p class="product-card__title">{{product.name}}</p>
+        <p class="product-card__price">{{product.price | currency}}</p>
+    </div>
+</div> 

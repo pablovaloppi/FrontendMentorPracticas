@@ -1,0 +1,11 @@
+<div class="cart__item">
+    <div class="cart__item__product">
+        <p class="cart__item__title">{{cartItem.product.name}}</p>
+        <div class="cart__item__info">
+            <p class="cart__item__quatity">{{cartItem.quiantity}}x</p>
+            <p class="cart__item__unit-price">&#64;{{cartItem.product.price | currency }}</p>
+            <p class="cart__item__total-price">{{ (cartItem.quiantity * cartItem.product.price) | currency}}</p>
+        </div>
+    </div>
+    <img src="../../../../assets/images/icon-remove-item.svg" alt="" class="cart__item__button-delete" (click)="deleteItem()">
+</div>

@@ -1,0 +1,24 @@
+<ng-template [ngIf]="isVisible">
+<div class="modal"  >
+  <div class="order">
+    <img
+      src="../../../assets/images/icon-order-confirmed.svg"
+      alt=""
+      class="order__img"
+    />
+    <h1 class="order__title">Order Confirmed</h1>
+    <p class="order__paragraph">We hope you enjoy your food!</p>
+    <div class="order__cart">
+      <app-order-cart-item-product *ngFor="let item of cartList"
+        [cartItem]="item"
+      ></app-order-cart-item-product>
+
+      <div class="order__total">
+        <p class="order__text">Order Total</p>
+        <h2 class="order__price">{{totalPrice | currency}}</h2>
+      </div>
+    </div>
+    <button class="order__button" (click) = closeModal()>Start New Order</button>
+  </div>
+</div>
+</ng-template>

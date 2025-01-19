@@ -1,0 +1,13 @@
+
+<h1 class="home__title">Desserts</h1>
+<div class="home">
+  <section class="home__products">
+    <app-product-card
+      *ngFor="let product of productList"
+      [product]="product"
+    ></app-product-card>
+  </section>
+  <section class="home__cart">
+    <app-cart></app-cart>
+  </section>
+</div>

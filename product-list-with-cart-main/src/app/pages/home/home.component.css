@@ -1,0 +1,33 @@
+.home__title {
+  color: var(--rose-900);
+  font-size: 34px;
+}
+.home {
+
+  .home__products {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+
+  .home__cart {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .home__products {
+    gap: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home {
+    display: flex;
+    .home__products {
+      justify-content: space-around;
+      max-width: 65%;
+    }
+  }
+}

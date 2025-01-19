@@ -1,0 +1,15 @@
+<div class="order-item">
+  <img
+    src={{cartItem.product.image?.thumbnail}}
+    alt=""
+    class="order-item__img"
+  />
+  <div class="order-item__center">
+    <p class="order-item__name">{{cartItem.product.name}}</p>
+    <div class="order-item__price">
+      <p class="order-item__quantity">{{cartItem.quiantity}}x</p>
+      <p class="order-item__unit-price">&#64;{{cartItem.product.price| currency}}</p>
+    </div>
+  </div>
+  <p class="order-item__total">{{cartItem.product.price * cartItem.quiantity | currency}}</p>
+</div>

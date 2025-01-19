@@ -1,0 +1,33 @@
+.order-item{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--rose-900);
+    .order-item__img{
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    .order-item__center{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .order-item__price{
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            .order-item__quantity{
+                color: var(--red);
+                margin-right: 5px;
+            }
+            .order-item__unit-price{
+                color: var(--rose-400);
+                font-weight: 400;
+            }
+        }
+    }
+}

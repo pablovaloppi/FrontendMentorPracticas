@@ -1,0 +1,41 @@
+<div class="cart">
+  <h2 class="cart__title">YouCart(0)</h2>
+  <div class="cart__empty-body" *ngIf="!cartEmpty; else cartContent">
+    <img
+      src="../../../../assets/images/illustration-empty-cart.svg"
+      alt=""
+      class="cart__empty-body__img"
+    />
+    <p class="cart__empty-body_text">Your added items will appear here</p>
+  </div>
+  <ng-template #cartContent>
+    <div class="cart__content">
+      <app-cart-item-product *ngFor="let item of cartList" [cartItem]="item">
+      </app-cart-item-product>
+
+      <div class="cart__content__footer">
+        <div class="cart__content__footer__total">
+          <p class="cart__content__footer__total__text">Order Total</p>
+          <p class="cart__content__footer__total__total-price">
+            {{ totalPrice | currency }}
+          </p>
+        </div>
+        <div class="cart__content__footer__info">
+          <img
+            src="../../../../assets/images/icon-carbon-neutral.svg"
+            alt=""
+            class="cart__content__footer__info__img"
+          />
+          <p class="cart__content__footer__info__text">
+            This is a <b>carbon-neutral</b> delivery
+          </p>
+        </div>
+        <button class="cart__content__footer__button" (click)="openModal()">Confirm Order</button>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
+<app-order-confirmed
+  [(isVisible)]="modalOrderVisible"
+></app-order-confirmed>
